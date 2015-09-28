@@ -63,8 +63,6 @@ public class ArcadeCore extends JavaPlugin {
 	 *
 	 */
 	
-	//Test
-	
 	private static ArcadeCore arcade;
 	private static ArcadeManager arcadeManager;
 	
