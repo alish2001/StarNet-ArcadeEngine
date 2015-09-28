@@ -54,7 +54,7 @@ public class ArcadeCore extends JavaPlugin {
 	 *         <b>This plugin is intended for use by The Star Network ONLY.</b>
 	 *         </p>
 	 *         <p>
-	 *         <b>Unauthorized use or access to this plugin will result in immediate
+	 *         <b>Unauthorized use or access to this Plugin will result in immediate
 	 *         legal action.</b>
 	 *         </p>
 	 *         <p>
@@ -62,6 +62,8 @@ public class ArcadeCore extends JavaPlugin {
 	 *         </p>
 	 *
 	 */
+	
+	//Test
 	
 	private static ArcadeCore arcade;
 	private static ArcadeManager arcadeManager;
