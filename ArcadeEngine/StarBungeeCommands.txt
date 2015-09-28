@@ -1,0 +1,26 @@
+StarNetworker Stuff:
+
+Command Format: Star|StarCommand|<Command>
+Database Request Format: Star|StarDB|<Request>|<Args>
+
+Commands:
+  - NetEnd: Stops all the servers and ends the network.
+  - NetUpdate: Push's an update to all servers and restarts them after the game is over
+
+Database Requests:
+  - ReqAccount:
+     Takes in PlayerUUID.
+     Returns:
+     <PlayerName>|<PlayerUUID>|<Rank>|<Shards> Soon: <PlayerName>|<PlayerUUID>|<Rank>|<Shards>|<totalPlayerTime>|<LastLogin>|<firstLogin>
+     
+  - ReqPunishments:
+     Takes in PlayerUUID.
+     Returns:
+     <PunishType>|<PunishReason>|<Punisher>|<PunishTime>_<PunishType>|<PunishReason>|<Punisher>|<PunishTime> (_'s used for punishment separation.) soon: <PunishType>|<PunishSev>|<PunishActive/Expired>|<PunishReason>|<Punisher>|<PunishTime>
+     
+  - ReqPurchases
+     Takes in PlayerUUID.
+     Returns:
+     <purchaseFormat>|<purchaseFormat> (|'s used for separating purchases.)
+     
+NOTE: use the 'ServerIP' Command for bungee to get the ip's for the servers and retreive their server info and motd etc.

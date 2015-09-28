@@ -1,0 +1,13 @@
+############################################################################################################
+#                                                                                                          #
+#                                                                                                          #
+#                              ###The Star Network's ArcadeEngine Config File###                           #
+#                                                                                                          #
+#                          ### Authors: alish2001: ArcadeEngine, SparkWings :Core###                       #
+#                                                                                                          #
+#                                     ###Copyright 2015 ©StarNetwork.LTD##                                 #
+############################################################################################################
+
+LobbyWorld: world
+DefaultGame: DRAGONSWORD
+AutoGameRotation: false
