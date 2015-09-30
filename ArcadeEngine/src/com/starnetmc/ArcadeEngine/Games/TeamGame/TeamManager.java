@@ -6,6 +6,7 @@ import java.util.List;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
@@ -22,14 +23,15 @@ public class TeamManager implements Listener {
 	private List<Team> teams;
 	
 	public TeamManager(ArcadeManager manager, List<Team> teams){
-		this.teams = teams;
 		this.manager = manager;
+		this.teams = teams;
+		init();
 		Bukkit.getServer().getPluginManager().registerEvents(this, ArcadeCore.getPlugin());
 	}
 	
 	public TeamManager(ArcadeManager manager){
-		this.teams = new ArrayList<Team>();
 		this.manager = manager;
+		this.teams = new ArrayList<Team>();
 		Bukkit.getServer().getPluginManager().registerEvents(this, ArcadeCore.getPlugin());
 	}
 	
@@ -87,10 +89,21 @@ public class TeamManager implements Listener {
 			}
 		  }
 		}
+		
+		Logger.log("<TeamManager> Initialised.");
+	}
+	
+	public void unRegister(){
+		teams.clear();
+		HandlerList.unregisterAll(this);
+		Logger.log("<TeamManager> UnRegistered.");
 	}
 	
 	public void reset(){
-		teams.clear();
+		for (Team t : teams){
+			t.getTeamPlayers().clear();
+		}
+		
 		init();
 		Logger.log("<TeamManager> Teams reset.");
 	}

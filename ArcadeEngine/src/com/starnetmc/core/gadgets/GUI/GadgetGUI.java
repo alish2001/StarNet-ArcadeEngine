@@ -18,7 +18,7 @@ import com.starnetmc.core.util.F;
 import com.starnetmc.core.util.ItemFactory;
 import com.starnetmc.core.util.Rank;
 import com.starnetmc.core.util.USound;
-import com.starnetmc.core.util.UtilPacket;
+import com.starnetmc.core.util.UPacket;
 
 public class GadgetGUI {
 	
@@ -91,7 +91,7 @@ public class GadgetGUI {
 		
 		p.openInventory(gui);
 		USound.PSound(p, Sound.ORB_PICKUP, 7F, 1F);
-		UtilPacket.sendActionBarMessage(p, F.boldGreen + "Gadgets GUI opened!");
+		UPacket.sendActionBarMessage(p, F.boldGreen + "Gadgets GUI opened!");
 	}
 
 	public static void openItemGadgetGUI(Player p) {
@@ -148,7 +148,7 @@ public class GadgetGUI {
 		}
 		
 		p.openInventory(gui);
-		UtilPacket.sendActionBarMessage(p, F.boldGreen + "Item Gadgets GUI opened!");
+		UPacket.sendActionBarMessage(p, F.boldGreen + "Item Gadgets GUI opened!");
 	}
 	
 	public static void openMorphGUI(Player p) {
@@ -205,7 +205,7 @@ public class GadgetGUI {
 		}
 		
 		p.openInventory(gui);
-		UtilPacket.sendActionBarMessage(p, F.boldGreen + "Morphs GUI opened!");
+		UPacket.sendActionBarMessage(p, F.boldGreen + "Morphs GUI opened!");
 	}
 	
 	public static void openMountGUI(Player p) {
@@ -262,7 +262,7 @@ public class GadgetGUI {
 		}
 		
 		p.openInventory(gui);
-		UtilPacket.sendActionBarMessage(p, F.boldGreen + "Mounts GUI opened!");
+		UPacket.sendActionBarMessage(p, F.boldGreen + "Mounts GUI opened!");
 	}
 	
 	public static void openParticleGUI(Player p) {
@@ -320,7 +320,7 @@ public class GadgetGUI {
 		}
 		
 		p.openInventory(gui);
-		UtilPacket.sendActionBarMessage(p, F.boldGreen + "Particles GUI opened!");
+		UPacket.sendActionBarMessage(p, F.boldGreen + "Particles GUI opened!");
 	}
 	
 	private static void setGadget(Player p, Gadget g, int position, Inventory gui){

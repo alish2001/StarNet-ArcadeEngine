@@ -26,7 +26,7 @@ import com.starnetmc.ArcadeEngine.Utils.USound;
 import com.starnetmc.core.util.F;
 import com.starnetmc.core.util.ParticleEffect;
 import com.starnetmc.core.util.UParticle;
-import com.starnetmc.core.util.UtilPacket;
+import com.starnetmc.core.util.UPacket;
 
 public class SkillLightningStrike extends Skill {
 
@@ -57,7 +57,7 @@ public class SkillLightningStrike extends Skill {
 	    	
 			if (e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK){
 			if (!getCooldownManager().isAllowed(p)){
-				UtilPacket.sendActionBarMessage(p, (AF.recharge(getName(), getCooldownManager().getTimeLeft(p, Time.SECONDS) + " Seconds")));
+				UPacket.sendActionBarMessage(p, (AF.recharge(getName(), getCooldownManager().getTimeLeft(p, Time.SECONDS) + " Seconds")));
 				return;
 			}
 			
@@ -65,7 +65,7 @@ public class SkillLightningStrike extends Skill {
 			UParticle.ParticleExplosion(ParticleEffect.CLOUD, p.getLocation());
 			e.getItem().addEnchantment(Enchantment.DURABILITY, 3);
 			USound.PSound(p, Sound.BLAZE_BREATH, 2.5f, 1.25f);
-			UtilPacket.sendActionBarMessage(p, F.boldAqua + "Your sword has been CHARGED!");
+			UPacket.sendActionBarMessage(p, F.boldAqua + "Your sword has been CHARGED!");
 			p.sendMessage(AF.skill("Left click to send a Lightning Strike to where you're looking!"));
 			rechargeSkill(p);
 			return;

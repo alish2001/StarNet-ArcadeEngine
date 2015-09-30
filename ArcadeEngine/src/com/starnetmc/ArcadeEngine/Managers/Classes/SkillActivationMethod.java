@@ -4,7 +4,8 @@ public enum SkillActivationMethod {
 	
 	RIGHT_CLICK("Right Click"), 
 	LEFT_CLICK("Left Click"),
-	SHIFT("Shift");
+	SHIFT("Shift"),
+	PASSIVE("Passive");
 	
 	private String iString;
 	

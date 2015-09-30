@@ -8,7 +8,8 @@ public enum GameType {
 	SPLEEF("Spleef", GameInstancer.forge_SS_GClass(), MapType.DEFAULT),
 	DRAGONSWORD("Dragon's Blade", GameInstancer.forge_DS_GClass(), MapType.DSMAP),
 	SURVIVALGAMES("Survival Games", GameInstancer.forge_SG_GClass(), MapType.DEFAULT),
-	BORDERBUSTERS("Border Busters", GameInstancer.forge_BB_GClass(), MapType.BBMAP);
+	BORDERBUSTERS("Border Busters", GameInstancer.forge_BB_GClass(), MapType.BBMAP),
+	PACMAN("Pacman", GameInstancer.forge_PM_GClass(), MapType.TEAMMAP_TWO);
 	
 	private String name;
 	private Game gClass;

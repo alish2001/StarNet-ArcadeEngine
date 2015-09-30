@@ -17,6 +17,7 @@ public class All {
 		allGames.add(GameType.DRAGONSWORD);
 		allGames.add(GameType.SURVIVALGAMES);
 		allGames.add(GameType.BORDERBUSTERS);
+		allGames.add(GameType.PACMAN);
 		return allGames;
 	}
 	

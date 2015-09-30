@@ -21,7 +21,7 @@ import com.starnetmc.core.gadgets.GadgetType;
 import com.starnetmc.core.gadgets.Gadgets;
 import com.starnetmc.core.util.F;
 import com.starnetmc.core.util.USound;
-import com.starnetmc.core.util.UtilPacket;
+import com.starnetmc.core.util.UPacket;
 
 public class DragonMount extends Gadget {
 	
@@ -79,7 +79,7 @@ public class DragonMount extends Gadget {
 			ent.remove();
 		}
     	
-		UtilPacket.sendActionBarMessage(p, F.boldRed + "Un-Mounted " + getName() + F.boldGreen + "!");
+		UPacket.sendActionBarMessage(p, F.boldRed + "Un-Mounted " + getName() + F.boldGreen + "!");
 		USound.PSound(p, Sound.NOTE_PLING, -0.75f, 1);
     	Gadgets.removeGadgetFromUser(p, this);
 	}

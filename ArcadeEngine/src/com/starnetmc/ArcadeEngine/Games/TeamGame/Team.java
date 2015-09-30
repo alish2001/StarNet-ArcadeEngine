@@ -26,11 +26,11 @@ public class Team {
 	private List<Kit> teamKits;
 	private boolean exclusiveKits;
 	
-	public Team(String teamName, String teamTag, ChatColor teamColor, ItemStack teamIcon, List<Player> teamPlayers, int maxPlayers, List<Kit> teamKits, boolean exclusiveKits){
+	public Team(String teamName, String teamTag, ChatColor teamColor, Material teamIcon, List<Player> teamPlayers, int maxPlayers, List<Kit> teamKits, boolean exclusiveKits){
 		this.teamName = teamName;
 		this.teamTag = teamTag;
 		this.teamColor = teamColor;
-		this.teamIcon = teamIcon;
+		setIcon(teamIcon);
 		this.teamPlayers = teamPlayers;
 		this.maxPlayers = maxPlayers;
 		this.teamKits = teamKits;
@@ -68,7 +68,7 @@ public class Team {
 		this.teamPlayers.remove(p);
 		Chat.setTag(p);
 		
-		Bukkit.getServer().getPluginManager().callEvent(new TeamChangeEvent(p, new Team("NoTeam", "N.T", ChatColor.RED, teamIcon, teamPlayers, 0, null, false)));
+		Bukkit.getServer().getPluginManager().callEvent(new TeamChangeEvent(p, new Team("NoTeam", "N.T", ChatColor.RED, null, teamPlayers, 0, null, false)));
 		Logger.log("<TeamManager> Removed player: " + p.getName() + " from Team: " + getName(false));
 	}
 	

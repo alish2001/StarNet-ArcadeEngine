@@ -18,7 +18,7 @@ import com.starnetmc.ArcadeEngine.Managers.Classes.Skill;
 import com.starnetmc.ArcadeEngine.Managers.Classes.SkillActivationMethod;
 import com.starnetmc.ArcadeEngine.Utils.AF;
 import com.starnetmc.ArcadeEngine.Utils.USound;
-import com.starnetmc.core.util.UtilPacket;
+import com.starnetmc.core.util.UPacket;
 
 public class DerpSkill extends Skill {
 
@@ -43,7 +43,7 @@ public class DerpSkill extends Skill {
 			if (e.getItem().getType() != getUseMat()) return;
 			if (e.getItem().getItemMeta().getDisplayName() != getUseItem().getItemMeta().getDisplayName()) return;
 			if (!getCooldownManager().isAllowed(p)){
-				UtilPacket.sendActionBarMessage(p, (AF.recharge(getName(), getCooldownManager().getTimeLeft(p, Time.SECONDS) + " Seconds")));
+				UPacket.sendActionBarMessage(p, (AF.recharge(getName(), getCooldownManager().getTimeLeft(p, Time.SECONDS) + " Seconds")));
 				return;
 			} else {
 				p.setFoodLevel(20);

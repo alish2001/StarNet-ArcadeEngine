@@ -13,7 +13,7 @@ import net.minecraft.server.v1_8_R3.PlayerConnection;
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 
-public class UtilPacket {
+public class UPacket {
 	
 	public static void sendTitleBarMessage(Player player,String title, String subtitle) {
 		

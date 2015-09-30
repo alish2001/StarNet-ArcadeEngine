@@ -12,7 +12,7 @@ import com.starnetmc.core.commands.util.CommandBase;
 import com.starnetmc.core.util.F;
 import com.starnetmc.core.util.Rank;
 import com.starnetmc.core.util.UPlayer;
-import com.starnetmc.core.util.UtilPacket;
+import com.starnetmc.core.util.UPacket;
 
 public class DebugCMD extends CommandBase<ArcadeCMDS> {
 	
@@ -40,7 +40,7 @@ public class DebugCMD extends CommandBase<ArcadeCMDS> {
 								  ArcadeCore.getArcadeManager().getScoreboardManager().addCustomScoreboardUser(t, new DebugScoreboard());
 								  p.sendMessage(AF.debug("Enabled Debug Board for " + t.getName()));
 								  t.sendMessage(AF.debug(p.getName() + " Has Enabled the Debug Board for you!"));
-								  UtilPacket.sendActionBarMessage(t, AF.boldYellow + "Loading debug board...");
+								  UPacket.sendActionBarMessage(t, AF.boldYellow + "Loading debug board...");
 								  USound.PSound(t, Sound.ORB_PICKUP, 2.25f, 1.25f);
 								  return;
 								  
@@ -49,7 +49,7 @@ public class DebugCMD extends CommandBase<ArcadeCMDS> {
 									  ArcadeCore.getArcadeManager().getScoreboardManager().removeCustomScoreboardUser(t);
 									  p.sendMessage(AF.debug("§cDisabled Debug Board for " + t.getName()));
 									  t.sendMessage(AF.debug(p.getName() + " Has Disabled the Debug Board for you!"));
-									  UtilPacket.sendActionBarMessage(t, AF.boldRed + "Disabling debug board...");
+									  UPacket.sendActionBarMessage(t, AF.boldRed + "Disabling debug board...");
 									  USound.PSound(t, Sound.ORB_PICKUP, -2.25f, 1.25f);
 									  return;
 							   }
@@ -61,12 +61,12 @@ public class DebugCMD extends CommandBase<ArcadeCMDS> {
 				   }
 			
 			if (!(ArcadeCore.getArcadeManager().getScoreboardManager().getCustomScoreboardUsers().containsKey(p.getName()))){
-				  UtilPacket.sendActionBarMessage(p, AF.boldYellow + "Loading debug board...");
+				  UPacket.sendActionBarMessage(p, AF.boldYellow + "Loading debug board...");
 				  ArcadeCore.getArcadeManager().getScoreboardManager().addCustomScoreboardUser(p, new DebugScoreboard());
 				  USound.PSound(p, Sound.ORB_PICKUP, 2.25f, 1.25f);
 				  return;
 			   } else {
-					  UtilPacket.sendActionBarMessage(p, AF.boldRed + "Disabling debug board...");
+					  UPacket.sendActionBarMessage(p, AF.boldRed + "Disabling debug board...");
 					  ArcadeCore.getArcadeManager().getScoreboardManager().removeCustomScoreboardUser(p);
 					  USound.PSound(p, Sound.ORB_PICKUP, -2.25f, 1.25f);
 					  return;
@@ -85,7 +85,7 @@ public class DebugCMD extends CommandBase<ArcadeCMDS> {
 								  Logger.addLogee(t);
 								  p.sendMessage(AF.debug("Enabled Logs for " + t.getName()));
 								  t.sendMessage(AF.debug(p.getName() + " Has Enabled Logs for you!"));
-								  UtilPacket.sendActionBarMessage(t, AF.boldYellow + "Logs enabled.");
+								  UPacket.sendActionBarMessage(t, AF.boldYellow + "Logs enabled.");
 								  USound.PSound(t, Sound.ORB_PICKUP, 2.25f, 1.25f);
 								  return;
 							   } else {
@@ -93,7 +93,7 @@ public class DebugCMD extends CommandBase<ArcadeCMDS> {
 									  Logger.removeLogee(t);
 								      p.sendMessage(AF.debug("§cDisabled Logs for " + t.getName()));
 									  t.sendMessage(AF.debug(p.getName() + " Has Disabled Logs for you!"));
-									  UtilPacket.sendActionBarMessage(t, AF.boldRed + "Logs disabled.");
+									  UPacket.sendActionBarMessage(t, AF.boldRed + "Logs disabled.");
 									  USound.PSound(t, Sound.ORB_PICKUP, -2.25f, 1.25f);
 									  return;
 							   }
@@ -107,12 +107,12 @@ public class DebugCMD extends CommandBase<ArcadeCMDS> {
 				if (!Logger.isLogee(p)){
 					  
 					  Logger.addLogee(p);
-					  UtilPacket.sendActionBarMessage(p, AF.boldYellow + "Logs enabled.");
+					  UPacket.sendActionBarMessage(p, AF.boldYellow + "Logs enabled.");
 					  USound.PSound(p, Sound.ORB_PICKUP, 2.25f, 1.25f);
 					  return;
 				   } else {
 						  Logger.removeLogee(p);
-						  UtilPacket.sendActionBarMessage(p, AF.boldRed + "Logs disabled.");
+						  UPacket.sendActionBarMessage(p, AF.boldRed + "Logs disabled.");
 						  USound.PSound(p, Sound.ORB_PICKUP, -2.25f, 1.25f);
 						  return;
 				   }
@@ -131,7 +131,7 @@ public class DebugCMD extends CommandBase<ArcadeCMDS> {
 								  Logger.addLogee(t);
 								  p.sendMessage(AF.debug("Enabled Full Debug Mode for " + t.getName()));
 								  t.sendMessage(AF.debug(p.getName() + " Has Enabled Full debug mode for you!"));
-								  UtilPacket.sendActionBarMessage(t, AF.boldYellow + "Enabling Full debug mode...");
+								  UPacket.sendActionBarMessage(t, AF.boldYellow + "Enabling Full debug mode...");
 								  USound.PSound(t, Sound.ORB_PICKUP, 2.25f, 1.25f);
 								  return;
 								  
@@ -143,7 +143,7 @@ public class DebugCMD extends CommandBase<ArcadeCMDS> {
 									  Logger.addLogee(t);
 									  p.sendMessage(AF.debug("Enabled Full Debug Mode for " + t.getName()));
 									  t.sendMessage(AF.debug(p.getName() + " Has Enabled Full debug mode for you!"));
-									  UtilPacket.sendActionBarMessage(t, AF.boldYellow + "Enabling Full debug mode...");
+									  UPacket.sendActionBarMessage(t, AF.boldYellow + "Enabling Full debug mode...");
 									  USound.PSound(t, Sound.ORB_PICKUP, 2.25f, 1.25f);
 									  return;
 								   
@@ -152,7 +152,7 @@ public class DebugCMD extends CommandBase<ArcadeCMDS> {
 									  t.sendMessage(AF.debug(p.getName() + " Has Disabled Full debug mode for you!"));
 									  Logger.removeLogee(t);
 									  ArcadeCore.getArcadeManager().getScoreboardManager().removeCustomScoreboardUser(t);
-									  UtilPacket.sendActionBarMessage(t, AF.boldRed + "Full debug mode disabled.");
+									  UPacket.sendActionBarMessage(t, AF.boldRed + "Full debug mode disabled.");
 									  USound.PSound(t, Sound.ORB_PICKUP, -2.25f, 1.25f);
 									  return;
 							   }
@@ -167,7 +167,7 @@ public class DebugCMD extends CommandBase<ArcadeCMDS> {
 					  
 					  ArcadeCore.getArcadeManager().getScoreboardManager().addCustomScoreboardUser(p, new DebugScoreboard());
 					  Logger.addLogee(p);
-					  UtilPacket.sendActionBarMessage(p, AF.boldYellow + "Enabling Full debug mode...");
+					  UPacket.sendActionBarMessage(p, AF.boldYellow + "Enabling Full debug mode...");
 					  USound.PSound(p, Sound.ORB_PICKUP, 2.25f, 1.25f);
 					  return;
 					  
@@ -177,7 +177,7 @@ public class DebugCMD extends CommandBase<ArcadeCMDS> {
 						  ArcadeCore.getArcadeManager().getScoreboardManager().addCustomScoreboardUser(p, new DebugScoreboard());
 						  Logger.removeLogee(p);
 						  Logger.addLogee(p);
-						  UtilPacket.sendActionBarMessage(p, AF.boldYellow + "Enabling Full debug mode...");
+						  UPacket.sendActionBarMessage(p, AF.boldYellow + "Enabling Full debug mode...");
 						  USound.PSound(p, Sound.ORB_PICKUP, 2.25f, 1.25f);
 						  return;
 					   
@@ -185,7 +185,7 @@ public class DebugCMD extends CommandBase<ArcadeCMDS> {
 					      
 						  Logger.removeLogee(p);
 						  ArcadeCore.getArcadeManager().getScoreboardManager().removeCustomScoreboardUser(p);
-						  UtilPacket.sendActionBarMessage(p, AF.boldRed + "Full debug mode disabled.");
+						  UPacket.sendActionBarMessage(p, AF.boldRed + "Full debug mode disabled.");
 						  USound.PSound(p, Sound.ORB_PICKUP, -2.25f, 1.25f);
 						  return;
 				   }

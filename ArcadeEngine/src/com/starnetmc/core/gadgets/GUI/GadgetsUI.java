@@ -13,7 +13,7 @@ import com.starnetmc.core.gadgets.GadgetType;
 import com.starnetmc.core.gadgets.Gadgets;
 import com.starnetmc.core.util.F;
 import com.starnetmc.core.util.USound;
-import com.starnetmc.core.util.UtilPacket;
+import com.starnetmc.core.util.UPacket;
 
 public class GadgetsUI implements Listener {	
 	
@@ -73,11 +73,11 @@ public class GadgetsUI implements Listener {
 				   
 				   if (Gadgets.hasGadget(p, g)){
 					   Gadgets.removeGadgetFromUser(p, g);
-					   UtilPacket.sendActionBarMessage(p, F.boldRed + "UnEquiped " + g.getName() + F.boldRed + "!");
+					   UPacket.sendActionBarMessage(p, F.boldRed + "UnEquiped " + g.getName() + F.boldRed + "!");
 					   USound.PSound(p, Sound.NOTE_PLING, -0.75f, 1);
 				   } else if (!Gadgets.hasGadget(p, g)){
 					   Gadgets.addGadgetToUser(p, g);
-					   UtilPacket.sendActionBarMessage(p, F.boldGreen + "Equiped " + g.getName() + F.boldGreen + "!");
+					   UPacket.sendActionBarMessage(p, F.boldGreen + "Equiped " + g.getName() + F.boldGreen + "!");
 					   USound.PSound(p, Sound.ORB_PICKUP, 7F, 1F);
 				    }
 					   
@@ -111,11 +111,11 @@ public class GadgetsUI implements Listener {
 				   
 				   if (Gadgets.hasGadget(p, g)){
 					   Gadgets.removeGadgetFromUser(p, g);
-					   UtilPacket.sendActionBarMessage(p, F.boldRed + "Disabled " + g.getName() + F.boldRed +"!");
+					   UPacket.sendActionBarMessage(p, F.boldRed + "Disabled " + g.getName() + F.boldRed +"!");
 					   USound.PSound(p, Sound.NOTE_PLING, -0.75f, 1);
 				   } else if (!Gadgets.hasGadget(p, g)){
 					   Gadgets.addGadgetToUser(p, g);
-					   UtilPacket.sendActionBarMessage(p, F.boldGreen + "Enabled " + g.getName() + F.boldGreen +"!");
+					   UPacket.sendActionBarMessage(p, F.boldGreen + "Enabled " + g.getName() + F.boldGreen +"!");
 					   USound.PSound(p, Sound.ORB_PICKUP, 7F, 1F);
 				   }
 				       p.closeInventory();
@@ -148,11 +148,11 @@ public class GadgetsUI implements Listener {
 				   
 				   if (Gadgets.hasGadget(p, g)){
 					   Gadgets.removeGadgetFromUser(p, g);
-					   UtilPacket.sendActionBarMessage(p, F.boldRed + "Morphed out of " + g.getName() + F.boldRed +"!");
+					   UPacket.sendActionBarMessage(p, F.boldRed + "Morphed out of " + g.getName() + F.boldRed +"!");
 					   USound.PSound(p, Sound.NOTE_PLING, -0.75f, 1);
 				   } else if (!Gadgets.hasGadget(p, g)){
 					   Gadgets.addGadgetToUser(p, g);
-					   UtilPacket.sendActionBarMessage(p, F.boldGreen + "Morphed into " + g.getName() + F.boldGreen +"!");
+					   UPacket.sendActionBarMessage(p, F.boldGreen + "Morphed into " + g.getName() + F.boldGreen +"!");
 					   USound.PSound(p, Sound.ORB_PICKUP, 7F, 1F);
 				   }
 			         p.closeInventory();
@@ -185,11 +185,11 @@ public class GadgetsUI implements Listener {
 				   
 				   if (Gadgets.hasGadget(p, g)){
 					   Gadgets.removeGadgetFromUser(p, g);
-					   UtilPacket.sendActionBarMessage(p, F.boldRed + "Un-Mounted " + g.getName() + F.boldGreen + "!");
+					   UPacket.sendActionBarMessage(p, F.boldRed + "Un-Mounted " + g.getName() + F.boldGreen + "!");
 					   USound.PSound(p, Sound.NOTE_PLING, -0.75f, 1);
 				   } else if (!Gadgets.hasGadget(p, g)){
 					   Gadgets.addGadgetToUser(p, g);
-					   UtilPacket.sendActionBarMessage(p, F.boldGreen + "Mounted " + g.getName() + F.boldGreen + "!");
+					   UPacket.sendActionBarMessage(p, F.boldGreen + "Mounted " + g.getName() + F.boldGreen + "!");
 					   USound.PSound(p, Sound.ORB_PICKUP, 7F, 1F);
 				   }
 				   
